@@ -5,8 +5,8 @@
 
 #define LED_PIN_0 D0
 #define LED_PIN_1 D1
-#define LED_COUNT_0 20
-#define LED_COUNT_1 20
+#define LED_COUNT_0 22
+#define LED_COUNT_1 22
 #define GAP_SIZE 3
 
 Adafruit_NeoPixel strip0(LED_COUNT_0, LED_PIN_0, NEO_GRB + NEO_KHZ800);
