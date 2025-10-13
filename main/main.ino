@@ -78,10 +78,10 @@ void gyroReactive(sensors_event_t &gyro) {
   rotMag = constrain(rotMag, 0, maxRate);
   uint8_t speed = map(rotMag, 0, maxRate, 120, 50);
 
-  const float maxAxisRate = 50.0;
+  const float maxAxisRate = 100.0;
   auto signedMap = [&](float rate) -> uint8_t {
     rate = constrain(rate, -maxAxisRate, maxAxisRate);
-    return (uint8_t)map(rate, -maxAxisRate, maxAxisRate, 0, 255);
+    return (uint8_t)map(rate, -maxAxisRate, maxAxisRate, 64, 255);
   };
 
   uint8_t r = signedMap(rollRate);
@@ -89,9 +89,9 @@ void gyroReactive(sensors_event_t &gyro) {
   uint8_t b = signedMap(yawRate);
 
   const float deadband = 10.0;
-  if (fabs(rollRate) < deadband)  r = 128;
-  if (fabs(pitchRate) < deadband) g = 128;
-  if (fabs(yawRate) < deadband)   b = 128;
+  if (fabs(rollRate) < deadband)  r = 160;
+  if (fabs(pitchRate) < deadband) g = 160;
+  if (fabs(yawRate) < deadband)   b = 160;
 
   stripCycle(speed, r, g, b);
 }
@@ -108,7 +108,7 @@ void stripCycle(uint8_t wait, uint8_t r, uint8_t g, uint8_t b) {
 
     for (uint16_t j = 0; j < strip1.numPixels(); j++) {
       if (j % GAP_SIZE == i) 
-        strip1.setPixelColor(j, strip1.Color((255 - r) * fade, (255 - g) * fade, (255 - b) * fade)); // Complement
+        strip1.setPixelColor(j, strip1.Color(b * fade, r * fade, g * fade)); // 120 deg hue offset
       else strip1.setPixelColor(j, 0);
     }
 
