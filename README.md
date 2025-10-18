@@ -2,7 +2,7 @@ The **RGB Cat Ears** is a 3D-printed, motion-reactive cat ear headband. Each ear
 
 ## Hardware
 
-The full CAD model and design are available on [Onshape](https://cad.onshape.com/documents/aee8694863dfed44766b44b6/w/e9796f69ad3ce933161dcc72/e/1ec2e349ca86cca24512c082?configuration=List_xsrrYu7Js48prM%3DDefault&renderMode=0&uiState=68ea332e07faaa2b8cdbc222).
+The full CAD model and design are available on [Onshape](https://cad.onshape.com/documents/aee8694863dfed44766b44b6/w/e9796f69ad3ce933161dcc72/e/a92e5c633d0d9e836d9ece51?renderMode=0&uiState=68f36529a2913f7217212281).
 
 **Main Components**:
 - Seed Studio XIAO ESP32-C3
