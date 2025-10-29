@@ -18,10 +18,6 @@ This is just the workflow I personally use; feel free to adapt it.
 1. Clone the repository.
 2. Open the Arduino IDE.
 3. Install the following libraries:
-    1. Adafruit BusIO
-    2. Adafruit GFX Library
-    3. Adafruit MPU6050
-    4. Adafruit NeoPixel
-    5. Adafruit SSD1306
-    6. Adafruit Unified Sensor
+    1. Adafruit MPU6050
+    2. Adafruit NeoPixel
 4. Select the XIAO_ESP32C3 as the board in Arduino IDE.
